@@ -1,0 +1,15 @@
+<!--Prathima Yarlagadda-->
+<%- include('_layouts/header') -%>
+<main>
+    <section class="invoice">
+        <h1>Thank you for ordering with us <%= name %>!</h1>
+        <h3>We will notify your order status on your phone: <%= phone %></h3>
+        <h3>Delivery Address: <%= address%>, <%= city%>, <%= province%>, <%= postCode%> </h3>
+        
+        <h3>Cost: $<%= cost; %></h3>
+        <h3>Tax: $<%= tax; %></h3>
+        <h3>Delivery Chargers: $<%=delCost%></h3>
+        <h3>Total: $<%= totalCost; %></h3>        
+    </section>
+</main>
+<%- include('_layouts/footer') -%>

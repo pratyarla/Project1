@@ -1,0 +1,20 @@
+{
+  "name": "yogaShop",
+  "version": "1.0.0",
+  "description": "yogaShop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prathima",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "ejs": "*",
+    "express-validator": "*",
+    "express-session": "*",
+    "connect-flash": "*",
+    "express-messages": "*"
+  }
+}

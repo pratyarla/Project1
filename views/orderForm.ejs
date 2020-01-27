@@ -1,0 +1,71 @@
+<!--Prathima Yarlagadda-->
+<%- include('_layouts/header') -%>
+<main>
+    <section>
+        <h2>Order Form:</h2>
+        <form method="POST" action="/orderForm">
+            <label for="name">Name*:</label> 
+            <input placeholder="First Last" type="text" class="form-input" name="name">
+
+            <label for="phone">Phone*:</label>
+            <input placeholder="123-123-1234" type="phone" class="form-input" name="phone">
+
+            <label for="email">Email*:</label>
+            <input placeholder="yogashop@gmail.com" type="email" class="form-input" name="email">
+
+            <label for="password">Password:</label>
+            <input placeholder="Password" type="password" class="form-input" name="password">
+
+            <label for="address">Address*:</label>
+            <input placeholder="Street No and Name" type="text" class="form-input" name="address"> 
+
+            <label for="city">City*:</label>       
+            <input placeholder="City" type="text" class="form-input" name="city">
+
+            <label for="postcode">Postal Code*:</label>
+            <input type="postcode" placeholder="X9X 9X9" class="form-input" name="postCode" >
+                    
+            <label for="province">Province/Terrritory*:</label>   
+            <select name="province">
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswicke</option>
+                <option value="NL">Newfoundl and Labrador</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NV">Nunavut</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
+            </select>
+                <label for="item1">Mats: "$12 each"</label>
+                <input value="0" type="text" class="form-input" name="item1" placeholder="No of Mats">
+                <label for="item2">Pants: "$40each"</label>
+                <input value= "0" type="text" class="form-input" name="item2" placeholder="No of Pants">
+                <label for="item3">Bricks: "$20set"</label>
+                <input value= "0" type="text" class="form-input" name="item3" placeholder="No of Bricks">
+                    
+                <label for="delTime" >Delivery Time: Days</label>
+                <select name="delTime">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                </select></br> </br>
+            <input id="btnSubmit" type="submit" class="form-submit" value="Place Order"><br>
+        <% 
+            if(typeof errors !== 'undefined'){
+                for(var error of errors){
+                    %>
+                    <h3><%= error.msg %></h3>
+                    <%
+                }
+            }
+        %>
+    </form> 
+    </section>
+</main>
+<%- include('_layouts/footer') -%>
